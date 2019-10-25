@@ -9,6 +9,7 @@
 * Single Activity app architecture
 * Modern Android Jetpack utilization (Navigation/ViewModel)
 * Complies with service locator
+* Oflline support (cutom build of retrofit cache interceptor)
 * TLSv1.2 support for older version of android, thanks to Google Play Services
 * Retain all states if app alive in background
 * Use pretty hazy background based on Open Gl ES shaders
