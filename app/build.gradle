@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.spgroup.digital.psiindex"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin Stdlib
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Google Play Services
+    implementation 'com.google.android.gms:play-services-safetynet:17.0.0'
+
+    // Jetpack Support Libraries
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // MvRx
+    implementation 'com.airbnb.android:mvrx:1.2.1'
+
+    // Epoxy
+    implementation "com.airbnb.android:epoxy:$epoxy_version"
+    kapt "com.airbnb.android:epoxy-processor:$epoxy_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation 'com.squareup.moshi:moshi-kotlin:1.8.0'
+    debugImplementation 'com.squareup.okhttp3:logging-interceptor:3.12.3'
+
+    //Service Locator
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.koin:koin-android:$koin_version"
+
+    //Lottie animations
+    implementation 'com.airbnb.android:lottie:3.1.0'
+
+    //LocalDateTime backport
+    implementation 'org.threeten:threetenbp:1.4.0'
+
+    //Nice DateTime
+    implementation 'com.github.curioustechizen.android-ago:library:1.4.0'
+
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.awaitility:awaitility-kotlin:4.0.1'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.2.2'
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    testImplementation "org.koin:koin-test:$koin_version"
+
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test:core:1.2.0'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.2.0'
+    androidTestImplementation 'org.awaitility:awaitility-kotlin:3.1.6'
+    androidTestImplementation "org.koin:koin-test:$koin_version"
+    androidTestImplementation 'com.squareup.okhttp3:mockwebserver:3.12.3'
+}

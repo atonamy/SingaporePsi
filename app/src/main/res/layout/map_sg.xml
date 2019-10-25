@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/map"
+    android:background="@android:color/transparent">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sgMap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:0.55"
+        android:alpha="0.0"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/ic_map_sg" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/west"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/ui_view_padding"
+        android:textSize="@dimen/psi_index_font_size"
+        app:fontFamily="@font/android"
+        app:layout_constraintBottom_toBottomOf="@+id/sgMap"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toTopOf="@+id/sgMap"
+        tools:text="88" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/central"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/ui_view_padding"
+        android:textSize="@dimen/psi_index_font_size"
+        app:fontFamily="@font/android"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sgMap"
+        app:layout_constraintStart_toStartOf="@+id/sgMap"
+        app:layout_constraintTop_toTopOf="@+id/sgMap"
+        app:layout_constraintEnd_toEndOf="@+id/sgMap"
+        tools:text="117" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/north"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/ui_view_padding"
+        android:textSize="@dimen/psi_index_font_size"
+        app:fontFamily="@font/android"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/sgMap"
+        app:layout_constraintEnd_toEndOf="@+id/sgMap"
+        app:layout_constraintTop_toTopOf="@+id/sgMap"
+        tools:text="49" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/east"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/ui_view_padding"
+        android:textSize="@dimen/psi_index_font_size"
+        app:fontFamily="@font/android"
+        app:layout_constraintBottom_toBottomOf="@+id/sgMap"
+        app:layout_constraintTop_toTopOf="@+id/sgMap"
+        app:layout_constraintEnd_toEndOf="@+id/right"
+        tools:text="52" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/south"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/ui_view_padding"
+        android:textSize="@dimen/psi_index_font_size"
+        app:fontFamily="@font/android"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintStart_toStartOf="@+id/sgMap"
+        app:layout_constraintEnd_toEndOf="@+id/sgMap"
+        app:layout_constraintBottom_toBottomOf="@+id/sgMap"
+        tools:text="147" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

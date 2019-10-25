@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Singapore PSI</string>
+    <string name="last_update">Last Update: %1$s</string>
+    <string name="offline_error">It\'s seems your device is offline.
+        Check your internet connection settings.</string>
+    <string name="retry_button">RETRY</string>
+    <string name="unknown_error">Oops! Something went wrong...</string>
+    <string name="no_open_gl_support">
+        Sorry but your device unable to run this application due lack of support Open GL ES 2.0 </string>
+    <string name="exit_button">EXIT</string>
+</resources>
