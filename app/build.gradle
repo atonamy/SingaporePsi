@@ -23,18 +23,14 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
-    }
-
     sourceSets {
         String sharedTestCodeDir = 'src/sharedTest/kotlin'
         test {
             java.srcDirs += sharedTestCodeDir
         }
-        /*androidTest {
+        androidTest {
             java.srcDirs += sharedTestCodeDir
-        }*/
+        }
     }
 }
 

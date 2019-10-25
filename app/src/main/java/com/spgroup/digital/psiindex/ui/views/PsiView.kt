@@ -29,8 +29,8 @@ class PsiView : ConstraintLayout {
 
     companion object {
         private const val duration = 500L
-        private const val loadingAlpha = .4f
-        private const val mapAlpha = .6f
+        const val loadingAlpha = .4f
+        const val mapAlpha = .6f
         private const val alphaOffset = .6f
     }
 
