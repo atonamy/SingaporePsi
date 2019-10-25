@@ -15,6 +15,7 @@ android {
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -24,6 +25,16 @@ android {
 
     dataBinding {
         enabled = true
+    }
+
+    sourceSets {
+        String sharedTestCodeDir = 'src/sharedTest/kotlin'
+        test {
+            java.srcDirs += sharedTestCodeDir
+        }
+        /*androidTest {
+            java.srcDirs += sharedTestCodeDir
+        }*/
     }
 }
 
