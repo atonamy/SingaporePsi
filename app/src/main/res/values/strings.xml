@@ -6,6 +6,6 @@
     <string name="retry_button">RETRY</string>
     <string name="unknown_error">Oops! Something went wrong...</string>
     <string name="no_open_gl_support">
-        Sorry but your device unable to run this application due lack of support Open GL ES 2.0 </string>
+        Sorry, your device unable to run this application due lack of support Open GL ES 2.0 </string>
     <string name="exit_button">EXIT</string>
 </resources>
