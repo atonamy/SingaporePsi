@@ -76,7 +76,7 @@ class PsiFragment : BaseMvRxFragment() {
             }
             is Fail -> {
                 reload.hide()
-                body.showRetryActionSnackbar(state.psiRequest?.error?.message ?:
+                body.showRetryActionSnackbar(state.psiRequest.error.message ?:
                     getString(R.string.unknown_error)) {
                         psiViewModel.reloadPsiData()
                 }
