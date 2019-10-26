@@ -87,11 +87,16 @@ class UiInstrumentedTest : BaseTests() {
                     north != null &&
                     south != null &&
                     central != null &&
-                    west.intVal <= 50 && west.currentTextColor == context.color(R.color.healthyLevel) &&
-                    east.intVal > 50 && east.intVal <= 100 && east.currentTextColor == context.color(R.color.moderateLevel) &&
-                    central.intVal <= 50 && central.currentTextColor == context.color(R.color.healthyLevel) &&
-                    east.intVal > 50 && south.intVal <= 100 && south.currentTextColor == context.color(R.color.moderateLevel) &&
-                    north.intVal > 100 && north.currentTextColor == context.color(R.color.unhealthyLevel)
+                    west.intVal >= 0 && west.intVal <= 50 &&
+                        west.currentTextColor == context.color(R.color.healthyLevel) &&
+                    east.intVal >= 0 && east.intVal > 50 && east.intVal <= 100 &&
+                        east.currentTextColor == context.color(R.color.moderateLevel) &&
+                    central.intVal >= 0 && central.intVal <= 50 &&
+                        central.currentTextColor == context.color(R.color.healthyLevel) &&
+                    south.intVal >= 0 && south.intVal > 50 && south.intVal <= 100 &&
+                        south.currentTextColor == context.color(R.color.moderateLevel) &&
+                    north.intVal >=0 && north.intVal > 100 &&
+                        north.currentTextColor == context.color(R.color.unhealthyLevel)
         }
     }
 
@@ -109,8 +114,12 @@ class UiInstrumentedTest : BaseTests() {
         }
     }
 
-    private val AppCompatTextView.intVal
-        get() = text.toString().toInt()
+    private val AppCompatTextView.intVal: Int
+        get()  = try {
+            text.toString().toInt()
+        } catch(e: NumberFormatException) {
+            -1
+        }
 
     private fun Context.color(@ColorRes color: Int) =
         ContextCompat.getColor(this, color)

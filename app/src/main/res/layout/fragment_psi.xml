@@ -47,7 +47,7 @@
         android:padding="@dimen/ui_view_padding"
         />
 
-    <com.spgroup.digital.psiindex.ui.views.FixedFloatingActionButton
+    <com.spgroup.digital.psiindex.ui.views.FixedFloatActionButton
         android:id="@+id/reload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
