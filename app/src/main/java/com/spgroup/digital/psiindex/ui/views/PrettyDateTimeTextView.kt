@@ -6,7 +6,9 @@ import androidx.core.content.res.ResourcesCompat
 import com.github.curioustechizen.ago.RelativeTimeTextView
 import com.spgroup.digital.psiindex.R
 
-class PrettyDateTimeTextView(context: Context, attrs: AttributeSet) : RelativeTimeTextView(context, attrs) {
+class PrettyDateTimeTextView @JvmOverloads constructor(
+context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : RelativeTimeTextView(context, attrs, defStyleAttr) {
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()

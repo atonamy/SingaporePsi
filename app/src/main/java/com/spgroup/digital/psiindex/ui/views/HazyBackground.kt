@@ -9,10 +9,9 @@ import com.spgroup.digital.psiindex.extensions.getRawFileAsString
 import com.spgroup.digital.psiindex.extensions.hasOpenGl
 import com.spgroup.digital.psiindex.ui.views.renderers.HazyBackgroundRenderer
 
-class HazyBackground : GLSurfaceView {
-
-    constructor(context: Context) : super(context)
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
+class HazyBackground @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null
+) : GLSurfaceView(context, attrs) {
 
     init {
         if(context.hasOpenGl) {
