@@ -25,7 +25,7 @@ import org.threeten.bp.ZoneId
 class PsiView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr){
-    
+
     companion object {
         private const val duration = 500L
         const val loadingAlpha = .4f
