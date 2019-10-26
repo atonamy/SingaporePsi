@@ -22,11 +22,10 @@ import org.threeten.bp.ZoneId
 
 
 @ModelView(defaultLayout = R.layout.psi_content)
-class PsiView : ConstraintLayout {
-
-    constructor(context: Context) : super(context)
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
-
+class PsiView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : ConstraintLayout(context, attrs, defStyleAttr){
+    
     companion object {
         private const val duration = 500L
         const val loadingAlpha = .4f
